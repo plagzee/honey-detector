@@ -99,10 +99,7 @@ I am working on a Kivy-based Android app that brings the same Honey detection to
 * [x] 🔒 Model security improvements
 * [x] 🧪 Add unit tests and improve dataset validation
 
-<<<<<<< HEAD
 ---
 
 Made with ❤️ for a dog named Honey.
-=======
-Made with ❤️ for a dog named Honey.
->>>>>>> 7f99e2c0a8113c1e58ac744a52244d2dfb8c1365
+
