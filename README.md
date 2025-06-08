@@ -9,6 +9,7 @@ This project demonstrates the use of **Machine Learning** and **Computer Vision*
 ## 📚 Contents
 - [🔍 Overview](#-overview)
 - [⚙️ Installation](#-installation)
+- [📱 Contribute (Android App)](#-contribute-android-app)
 - [🚧 To Do](#-to-do)
 
 ---
@@ -44,7 +45,7 @@ Used to download **non-Honey** images from the internet using `simple_image_down
 Trains a **binary classifier** model to detect Honey vs. Not Honey.  
 Outputs the trained model as `honey_detector_model.pt` and also plots training loss and accuracy.
 
-[!Train mode](matplot.png)
+![Train mode](matplot.png)
 
 ### 🔍 `predict.py`
 A script to run predictions on test images using the trained model.
@@ -65,20 +66,29 @@ As of **08-06-2025**, the app is executable only via **Python** + **OpenCV**.
 1. 🧬 Clone the repository:
    ```bash
    git clone https://github.com/your-username/honey-detector.git
-   ```
 
 2. 📦 Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+3. 🛠️ Run the app:
+   ```bash
+   python webcam.py
+   ```
 
-3. 📁 Request dataset access by opening an [issue](https://github.com/plagzee/honey-detector/issues).
 
-4. 🚀 Run the app:
-    ```bash
-    python webcam.py
-    ```
+## 📱 Contribute (Android App)
+I am working on a Kivy-based Android app that brings the same Honey detection to mobile devices! 📲
 
+**🎯 The mobile app:**
+* Uses the device’s camera to detect Honey in real time.
+* Plays a sound when Honey is detected.
+* Has a Settings screen to switch cameras or toggle sound.
+⚠️ The app is functional but not yet fully polished or packaged as an APK.
+**🤝 I need help!**
+* If you're experienced with Kivy, **Buildozer**, or packaging Android apps from Python...
+* Or you’d like to help clean up the UI/UX...
+**👉 Feel free to contribute or open a PR!**
 
 ## 🚧 To Do
 * [x] 🌐 Convert the Python-based system into a Flask web app
@@ -86,5 +96,7 @@ As of **08-06-2025**, the app is executable only via **Python** + **OpenCV**.
 * [x] 🪟 Optional: Build a desktop version using Tkinter or PyQt
 * [x] 🔒 Model security improvements
 * [x] 🧪 Add unit tests and improve dataset validation
+
+---
 
 Made with ❤️ for a dog named Honey.

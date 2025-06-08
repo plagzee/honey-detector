@@ -1,0 +1,80 @@
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+ScreenManager:
+    id: screen_manager
+    transition: FadeTransition()
+    MainScreen:
+        name: "main"
+    SettingsScreen:
+        name: "settings"
+
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Camera:
+            id: cam
+            play: True
+            resolution: root.cam_resolution
+            allow_stretch: True
+            keep_ratio: True
+
+        BoxLayout:
+            size_hint_y: None
+            height: '50dp'
+            padding: 10
+            spacing: 10
+
+            Label:
+                id: detection_label
+                text: root.detection_text
+                font_size: '20sp'
+
+            Button:
+                text: "Settings ⚙️"
+                size_hint_x: None
+                width: '100dp'
+                on_release:
+                    root.manager.current = "settings"
+
+<SettingsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 20
+
+        Label:
+            text: "Settings"
+            font_size: '24sp'
+            size_hint_y: None
+            height: '40dp'
+
+        Spinner:
+            id: camera_spinner
+            text: root.selected_camera
+            values: root.camera_options
+            size_hint_y: None
+            height: '44dp'
+            on_text: root.change_camera(self.text)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: '44dp'
+
+            Label:
+                text: "Play song"
+                size_hint_x: 0.7
+                font_size: '18sp'
+
+            Switch:
+                id: song_switch
+                active: root.song_on
+                on_active: root.toggle_song(self.active)
+
+        Button:
+            text: "Back"
+            size_hint_y: None
+            height: '50dp'
+            on_release:
+                root.manager.current = "main"
