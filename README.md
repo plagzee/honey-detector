@@ -44,7 +44,7 @@ Used to download **non-Honey** images from the internet using `simple_image_down
 Trains a **binary classifier** model to detect Honey vs. Not Honey.  
 Outputs the trained model as `honey_detector_model.pt` and also plots training loss and accuracy.
 
-[!Train mode](matplot.png)
+![Train model](matplot.png)
 
 ### 🔍 `predict.py`
 A script to run predictions on test images using the trained model.
